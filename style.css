@@ -15,7 +15,7 @@
 #gym-logo {
     color: transparent;
     /* Make the text transparent */
-    background-image: url('gym orange.jpg');
+    background-image: url('img/gym orange.jpg');
     /* Replace with your desired image URL */
     background-size: cover;
     background-position: center center;
@@ -113,7 +113,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('bg.jpg');
+    background-image: url('img/bg.jpg');
     /* Replace with your desired image */
     background-size: cover;
     background-position: center center;
