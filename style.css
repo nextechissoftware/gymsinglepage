@@ -1,0 +1,732 @@
+/* NAV BAR */
+
+
+/* Basic reset and box-sizing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Gym Logo with Background Image */
+
+#gym-logo {
+    color: transparent;
+    /* Make the text transparent */
+    background-image: url('gym orange.jpg');
+    /* Replace with your desired image URL */
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-clip: text;
+    /* Clip background image to text */
+    background-clip: text;
+    font-weight: bold;
+    font-size: 2rem;
+    /* Adjust the size as needed */
+    padding: 0.5rem;
+    /* Adjust padding if necessary */
+}
+
+
+/* Navbar Styling */
+
+#navbar {
+    background-color: #333;
+    /* Dark background */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition for color change */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    /* Default text color */
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover effect: Change color on hover */
+
+.navbar-nav .nav-link:hover {
+    /* Orange color on hover */
+    color: #d85627!important;
+    border-radius: 5px;
+}
+
+
+/* Navbar fixed on top */
+
+body {
+    padding-top: 70px;
+    /* Ensure content isn't hidden behind navbar */
+}
+
+
+/* Hamburger Menu Adjustments */
+
+.navbar-toggler {
+    color: #d85627;
+    /* Orange border for hamburger */
+}
+
+.navbar-toggler-icon {
+    color: #d85627;
+    /* Orange icon for hamburger */
+}
+
+
+/* Hover effect to pop out the links */
+
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-item:hover {
+    transform: scale(1.1);
+    /* Slightly pop-out effect */
+}
+
+
+/*LANDING PAGE YA HOME PAGE*/
+
+
+/* Landing Page */
+
+
+/* Set the body height and font */
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+/* Landing Page with Background Image */
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    /* Replace with your desired image */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+
+/* Optional: Add a dark overlay to the background */
+
+.landing-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    z-index: -1;
+    /* Ensure overlay stays behind the content */
+}
+
+
+/* Gym Name Styling */
+
+.gym-name {
+    font-size: 8rem;
+    /* Large font size */
+    font-weight: bold;
+    color: transparent;
+    /* Make the inside of the text transparent */
+    -webkit-text-stroke: 3px #d85627;
+    /* Orange border around text */
+    text-align: center;
+    letter-spacing: 3px;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    /* Smooth transition */
+    opacity: 0;
+    /* Start as hidden */
+    transform: translateY(100px);
+    /* Start 100px below */
+}
+
+
+/* Font sizes for different screen sizes */
+
+@media (min-width: 1200px) {
+    .gym-name {
+        font-size: 5rem;
+        /* Large on larger screens */
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .gym-name {
+        font-size: 4rem;
+        /* Medium on tablets */
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .gym-name {
+        font-size: 3rem;
+        /* Smaller on smaller tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .gym-name {
+        font-size: 2.5rem;
+        /* Smaller on mobile screens */
+    }
+}
+
+
+/* When page is loaded, show the gym name with transition */
+
+.show-gym-name .gym-name {
+    opacity: 1;
+    /* Gym name becomes visible */
+    transform: translateY(0);
+    /* Gym name moves to original position */
+}
+
+
+/* About Section Styling - Background Color Black */
+
+.about-section {
+    background-color: black;
+    /* Set background color to black */
+    color: white;
+    padding: 60px 0;
+}
+
+
+/* Flexbox for Layout - Left and Right Side */
+
+.about-section .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+}
+
+
+/* Left Side Images */
+
+.about-section .left-side {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-section .left-side img {
+    width: 100%;
+    /* Make image take full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Rounded corners for the images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+
+/* Hover effect for images */
+
+.about-section .left-side img:hover {
+    transform: translateY(-10px);
+    /* Pop out effect on hover */
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+    /* Orange shadow on hover */
+}
+
+
+/* Right Side Content */
+
+
+/* Right Side Content */
+
+.about-section .right-side h1 {
+    font-size: 4rem;
+    /* Larger font size than h1 */
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 1) 0%, rgba(255, 69, 0, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
+    transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    /* Transition for glowing effect, size, and color */
+}
+
+
+/* Hover effect for About Us Heading */
+
+.about-section .right-side h1:hover {
+    text-shadow: 0 0 25px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.9), 0 0 75px rgba(255, 69, 0, 1);
+    transform: translateY(-10px);
+    /* Heading hover pop-out effect */
+    font-size: 5rem;
+    /* Increase font size on hover */
+    color: rgba(255, 165, 0, 1);
+    /* Change text color to solid orange on hover */
+}
+
+
+/* Pop-out effect for the paragraph */
+
+.about-section .right-side p {
+    font-size: 1.1rem;
+    background-color: rgba(255, 69, 0, 0.1);
+    /* Light orange background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #d85627;
+    /* Light orange shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.about-section .right-side p:hover {
+    transform: translateY(-5px);
+    /* Pop out effect on hover */
+    box-shadow: 0 0 15px #d85627;
+    /* Stronger orange shadow on hover */
+    background-color: rgba(255, 69, 0, 0.2);
+    /* Darker orange background on hover */
+}
+
+
+/* Responsive Layout for Mobile Devices */
+
+@media (max-width: 768px) {
+    .about-section .row {
+        flex-direction: column;
+        /* Stack left and right sections vertically */
+        text-align: center;
+        /* Center-align text for smaller screens */
+    }
+    .about-section .left-side,
+    .about-section .right-side {
+        flex: 1 100%;
+        /* Allow both sections to take full width on small screens */
+    }
+    .about-section .right-side h2 {
+        font-size: 2rem;
+        /* Smaller font size for the heading */
+    }
+}
+
+
+/* Services Section */
+
+
+/* Our Services Section */
+
+
+/* Our Services Section */
+
+.services-section {
+    background-color: #000;
+    /* Black background */
+    color: #fff;
+    /* White text */
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 4rem;
+    /* Larger font size than h1 */
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 1) 0%, rgba(255, 69, 0, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
+    transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.section-title:hover {
+    text-shadow: 0 0 25px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.9), 0 0 75px rgba(255, 69, 0, 1);
+    transform: translateY(-10px);
+    /* Heading hover pop-out effect */
+    font-size: 5rem;
+    /* Increase font size on hover */
+    color: rgba(255, 165, 0, 1);
+    /* Change text color to solid orange on hover */
+}
+
+
+/* Service Cards */
+
+
+/* Service Cards */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+    /* Set a fixed height for the card */
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    /* Ensures image takes the full height of the card */
+    object-fit: cover;
+    /* Ensures the image covers the card area without distorting */
+    border-radius: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    /* Pop-out effect */
+    box-shadow: 0 8px 16px #d85627;
+    /* Orange shadow on hover */
+}
+
+.service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark background for text */
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.service-info .service-description {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.service-info .show-more-btn {
+    margin-top: 15px;
+    background-color: #d85627;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-info .show-more-btn:hover {
+    background-color: #ff8c00;
+    transform: translateY(-3px);
+    /* Button hover effect */
+}
+
+
+/* Hidden content */
+
+.hidden-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+/* Show hidden content on hover or click */
+
+.service-card:hover .hidden-content {
+    display: block;
+    /* Show hidden content */
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+    }
+    .service-info h3 {
+        font-size: 1.5rem;
+    }
+    .service-info .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Trainer Section */
+
+.trainers-section {
+    background-color: #000000;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+h2.text-orange {
+    font-size: 4rem;
+    /* Larger font size than h1 */
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 1) 0%, rgba(255, 69, 0, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
+    transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+
+/* On hover effect for heading */
+
+h2.text-orange:hover {
+    text-shadow: 0 0 25px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.9), 0 0 75px rgba(255, 69, 0, 1);
+    transform: translateY(-10px);
+    /* Heading hover pop-out effect */
+    font-size: 5rem;
+    /* Increase font size on hover */
+    color: rgba(255, 165, 0, 1);
+    /* Change text color to solid orange on hover */
+}
+
+
+/* Image Styling */
+
+img.img-fluid.rounded-circle {
+    width: 150px;
+    /* Medium size, adjust as needed */
+    height: 150px;
+    /* Equal to width for a perfect circle */
+    object-fit: cover;
+    /* Ensures the image fits within the circle without distortion */
+    border-radius: 50%;
+    /* Makes the image circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for scaling and shadow */
+    object-position: center;
+    /* Ensures the image is centered */
+    margin-bottom: 20px;
+    /* Adds space between the image and text */
+}
+
+
+/* Hover effect for images */
+
+img.img-fluid.rounded-circle:hover {
+    transform: scale(1.05);
+    /* Slightly increase the image size on hover */
+    box-shadow: 0 0 15px#d85627;
+    /* Orange shadow on hover */
+}
+
+
+/* Trainer Details Section */
+
+.trainer-details {
+    position: relative;
+    background-color: rgba(255, 69, 0, 0.1);
+    /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* On hover effect for trainer details */
+
+.trainer-details:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px #d85627;
+    /* Orange shadow on hover */
+}
+
+
+/* Trainer Name Styling */
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #d85627;
+    /* Orange color for the trainer name */
+}
+
+
+/* Text Styling */
+
+p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* Responsive Flex Layout */
+
+.row.align-items-center {
+    display: flex;
+    justify-content: center;
+}
+
+.row .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .col-md-8 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    /* On small devices, stack the text and image vertically */
+    .row.flex-md-row-reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+
+/* Footer Section */
+
+.footer {
+    background-color: #333;
+    /* Dark background similar to navbar */
+    color: #d85627;
+    /* Orange text color */
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    /* Align text to left for contact info */
+}
+
+
+/* Footer Section */
+
+.footer {
+    background-color: #333;
+    /* Dark background similar to navbar */
+    color: #d85627;
+    /* Orange text color */
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    /* Align text to left for contact info */
+}
+
+
+/* Footer Heading */
+
+.footer h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #d85627;
+    letter-spacing: 1px;
+}
+
+
+/* Footer Contact Info */
+
+.footer-contact {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-contact li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact li i {
+    margin-right: 10px;
+    color: #d85627;
+    /* Icon color in orange */
+}
+
+
+/* Footer Social Media Links */
+
+.footer-social-media {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-social-media li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    /* Space between each social media */
+}
+
+.footer-social-media li a {
+    text-decoration: none;
+    color: #d85627;
+    /* Orange color for text */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-media li a i {
+    margin-right: 10px;
+}
+
+.footer-social-media li a:hover {
+    color: #d85627;
+    /* Darker orange color on hover */
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+}
+
+
+/* Responsive Footer */
+
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        /* Center text for small screens */
+    }
+    .footer h5 {
+        font-size: 1.3rem;
+        /* Smaller heading font size on mobile */
+    }
+    .footer-social-media li {
+        margin-bottom: 20px;
+        /* More space for mobile view */
+    }
+    .footer-social-media li a {
+        font-size: 1.5rem;
+        /* Larger icons for mobile view */
+    }
+}
