@@ -40,7 +40,7 @@
             <a class="nav-link" href="#trainers">Trainers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer-section">Contact</a>
+            <a class="nav-link" href="#contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -60,6 +60,7 @@
 
 <section class="about-section" id="about-us">
   <div class="container">
+    
     <div class="row">
       <!-- Left Side: Image -->
       <div class="col-md-6 left-side">
@@ -180,43 +181,41 @@
       <h2 class="text-center mb-5 text-uppercase text-orange">Our Trainers</h2>
       
       <!-- Trainer 1 (Image on Left) -->
-      <div class="row mb-4 align-items-center">
-        <div class="col-md-4">
-          <img src="img/tainer1.jpEg" alt="Trainer 1" class="img-fluid rounded-circle">
+      <div class="trainer-container">
+        <div class="trainer-card left">
+          <div class="trainer-image">
+            <img src="img/tainer1.jpeg" alt="Trainer 1">
+          </div>
+          <div class="trainer-info">
+            <h3>John Doe</h3>
+            <p>Personal Trainer | Fitness Expert</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis aenean sit amet.</p>
+          </div>
         </div>
-        <div class="col-md-8">
-          <h3>John Doe</h3>
-          <div class="img/trainer-details">
-            <p>John is a certified personal trainer with over 5 years of experience in fitness. His passion is helping people become the best version of themselves.</p>
+      
+        <div class="trainer-card right">
+          <div class="trainer-image">
+            <img src="img/trainer2.jpg" alt="Trainer 2">
+          </div>
+          <div class="trainer-info">
+            <h3>Jane Smith</h3>
+            <p>Yoga Instructor | Wellness Coach</p>
+            <p>Curabitur hendrerit ultrices ipsum at auctor. Morbi non ante vel turpis gravida.</p>
+          </div>
+        </div>
+      
+        <div class="trainer-card left">
+          <div class="trainer-image">
+            <img src="img/Trainer3.jpeg" alt="Trainer 3">
+          </div>
+          <div class="trainer-info">
+            <h3>Emily White</h3>
+            <p>Strength Coach | Motivational Speaker</p>
+            <p>Fusce ultricies, ligula eu feugiat posuere, enim leo dapibus urna, et interdum mi.</p>
           </div>
         </div>
       </div>
       
-      <!-- Trainer 2 (Image on Right) -->
-      <div class="row mb-4 align-items-center flex-md-row-reverse">
-        <div class="col-md-4">
-          <img src="img/trainer2.jpg" alt="Trainer 2" class="img-fluid rounded-circle">
-        </div>
-        <div class="col-md-8">
-          <h3>Jane Smith</h3>
-          <div class="trainer-details">
-            <p>Jane specializes in strength training and conditioning. Her goal is to build strength and confidence in her clients both mentally and physically.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Trainer 3 (Image on Left) -->
-      <div class="row mb-4 align-items-center">
-        <div class="col-md-4">
-          <img src="img/Trainer3.jpeg" alt="Trainer 3" class="img-fluid rounded-circle">
-        </div>
-        <div class="col-md-8">
-          <h3>Mark Wilson</h3>
-          <div class="trainer-details">
-            <p>Mark is an experienced fitness coach with expertise in nutrition and recovery. He focuses on achieving fitness goals through a holistic approach.</p>
-          </div>
-        </div>
-      </div>
   
     </div>
   </section>
@@ -226,41 +225,26 @@
   <script src="script.js"></script> <!-- Your external script -->
 
 <!-- Footer Section -->
-<footer class="footer" id="footer-section">
-    <div class="container">
-      <div class="row">
-        <!-- Footer Left Section (Contact Info) -->
-        <div class="col-md-6 col-sm-12">
-          <h5>Contact Us</h5>
-          <ul class="footer-contact">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Gym Street, City, Country</li>
-            <li><i class="fas fa-phone"></i> +123 456 7890</li>
-            <li><i class="fas fa-envelope"></i> info@gymwebsite.com</li>
-          </ul>
-        </div>
-  
-        <!-- Footer Right Section (Social Media Links) -->
-        <div class="col-md-6 col-sm-12">
-          <h5>Follow Us</h5>
-          <ul class="footer-social-media">
-            <li>
-              <a href="https://facebook.com" target="_blank" class="social-icon">
-                <i class="fab fa-facebook-f"></i> Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com" target="_blank" class="social-icon">
-                <i class="fab fa-twitter"></i> Twitter
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i> Instagram
-              </a>
-            </li>
-          </ul>
-        </div>
+<footer class="footer" id="contact-us">
+    <div class="footer-container">
+      <!-- Contact Us Section -->
+      <div class="contact-us">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="tel:+1234567890">Phone: +1 234 567 890</a></li>
+          <li><a href="mailto:info@example.com">Email: info@example.com</a></li>
+        </ul>
       </div>
+    </div>
+    <!-- Follow Us Section -->
+    <div class="follow-us">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+      </ul>
     </div>
   </footer>
   
