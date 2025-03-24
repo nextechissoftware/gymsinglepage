@@ -145,7 +145,7 @@ body {
     font-weight: bold;
     color: transparent;
     /* Make the inside of the text transparent */
-    -webkit-text-stroke: 3px #d85627;
+    -webkit-text-stroke: 3px #ffffff;
     /* Orange border around text */
     text-align: center;
     letter-spacing: 3px;
@@ -267,6 +267,7 @@ body {
     font-weight: bold;
     text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
     transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
     /* Transition for glowing effect, size, and color */
 }
 
@@ -357,6 +358,8 @@ body {
     font-weight: bold;
     text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
     transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .section-title:hover {
@@ -497,6 +500,7 @@ h2.text-orange {
     font-weight: bold;
     text-shadow: 4px 4px 15px rgba(255, 69, 0, 0.7);
     transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
 }
 
 
@@ -512,221 +516,251 @@ h2.text-orange:hover {
     /* Change text color to solid orange on hover */
 }
 
-
-/* Image Styling */
-
-img.img-fluid.rounded-circle {
-    width: 150px;
-    /* Medium size, adjust as needed */
-    height: 150px;
-    /* Equal to width for a perfect circle */
-    object-fit: cover;
-    /* Ensures the image fits within the circle without distortion */
-    border-radius: 50%;
-    /* Makes the image circular */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Initial shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth transition for scaling and shadow */
-    object-position: center;
-    /* Ensures the image is centered */
-    margin-bottom: 20px;
-    /* Adds space between the image and text */
-}
-
-
-/* Hover effect for images */
-
-img.img-fluid.rounded-circle:hover {
-    transform: scale(1.05);
-    /* Slightly increase the image size on hover */
-    box-shadow: 0 0 15px#d85627;
-    /* Orange shadow on hover */
-}
-
-
-/* Trainer Details Section */
-
-.trainer-details {
-    position: relative;
-    background-color: rgba(255, 69, 0, 0.1);
-    /* Semi-transparent dark background */
+.trainer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
+}
+
+.trainer-card {
+    width: 30%;
+    font-size: 1.1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 69, 0, 0.1);
+    /* Light orange background */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Light orange shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin: 10px;
+    /* Smooth transition */
 }
 
-
-/* On hover effect for trainer details */
-
-.trainer-details:hover {
+.trainer-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 10px #d85627;
-    /* Orange shadow on hover */
+    /* Make the pop-out effect more noticeable */
+    /* Pop out effect on hover */
+    box-shadow: 0 0 15px #d85627;
+    /* Stronger orange shadow on hover */
+    background-color: rgba(255, 69, 0, 0.2);
+    /* Darker orange background on hover */
+}
+
+.trainer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.trainer-info h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.trainer-info p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.trainer-card.left {
+    transform: translateX(-10px);
+}
+
+.trainer-card.right {
+    transform: translateX(10px);
 }
 
 
-/* Trainer Name Styling */
+/* Mobile responsiveness */
 
-h3 {
-    font-size: 1.75rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #d85627;
-    /* Orange color for the trainer name */
+@media (max-width: 768px) {
+    .trainer-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .trainer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-
-/* Text Styling */
-
-p {
-    font-size: 1rem;
-    color: #fff;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-
-/* Responsive Flex Layout */
-
-.row.align-items-center {
+.trainer-container {
     display: flex;
     justify-content: center;
+    /* Center align the cards */
+    gap: 20px;
+    /* Adds equal space between all cards */
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.row .col-md-4 {
+.trainer-card {
+    width: 30%;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 69, 0, 0.1);
+    /* Light orange background */
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin: 10px;
 }
 
-.row .col-md-8 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
+.trainer-card:hover {
+    transform: translateY(-10px);
+    /* Pop out effect on hover */
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.6);
+    /* Stronger orange shadow on hover */
+    background-color: rgba(255, 69, 0, 0.2);
+    /* Darker orange background on hover */
 }
 
-@media (max-width: 767px) {
-    /* On small devices, stack the text and image vertically */
-    .row.flex-md-row-reverse {
-        flex-direction: column-reverse;
+
+/* Optional: Make sure cards are responsive on smaller screens */
+
+@media (max-width: 768px) {
+    .trainer-card {
+        width: 100%;
+        /* Cards will take full width on small screens */
+        margin-bottom: 20px;
+    }
+    .trainer-container {
+        flex-direction: column;
+        align-items: center;
+        /* Center cards in the container */
     }
 }
 
 
 /* Footer Section */
 
-.footer {
-    background-color: #333;
-    /* Dark background similar to navbar */
-    color: #d85627;
-    /* Orange text color */
-    padding: 40px 0;
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-    /* Align text to left for contact info */
-}
+
+/* Footer styles */
 
 
-/* Footer Section */
+/* Footer styles */
 
 .footer {
     background-color: #333;
-    /* Dark background similar to navbar */
-    color: #d85627;
-    /* Orange text color */
-    padding: 40px 0;
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-    /* Align text to left for contact info */
+    /* Dark background for footer */
+    color: white;
+    /* White text color */
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-
-/* Footer Heading */
-
-.footer h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #d85627;
-    letter-spacing: 1px;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-/* Footer Contact Info */
-
-.footer-contact {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer-contact li {
-    font-size: 1rem;
+.footer h3 {
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.footer-contact li i {
-    margin-right: 10px;
-    color: #d85627;
-    /* Icon color in orange */
-}
-
-
-/* Footer Social Media Links */
-
-.footer-social-media {
+.footer ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-.footer-social-media li {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    /* Space between each social media */
+.footer li {
+    margin: 5px 0;
 }
 
-.footer-social-media li a {
+.footer a {
+    color: white;
+    /* White text color by default */
     text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth color change on hover */
+}
+
+.footer a:hover {
     color: #d85627;
-    /* Orange color for text */
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, color 0.3s ease;
+    /* Orange color on hover */
 }
 
-.footer-social-media li a i {
-    margin-right: 10px;
+
+/* Contact Us Section */
+
+.contact-us {
+    width: 45%;
 }
 
-.footer-social-media li a:hover {
+
+/* Follow Us Section - Positioned at the right corner */
+
+.follow-us {
+    width: 200px;
+    /* Fixed width for the follow us section */
+    position: fixed;
+    /* Fix it to the right corner */
+    right: 0;
+    /* Align to the right edge of the screen */
+    bottom: 20px;
+    /* Adjust the bottom position to be slightly above the page bottom */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark background for better visibility */
+    padding: 15px;
+    border-radius: 8px;
+    /* Optional rounded corners */
+}
+
+.follow-us h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us li {
+    margin: 5px 0;
+}
+
+.follow-us a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth color change on hover */
+}
+
+.follow-us a:hover {
     color: #d85627;
-    /* Darker orange color on hover */
-    transform: scale(1.1);
-    /* Zoom effect on hover */
+    /* Orange color on hover */
 }
 
 
-/* Responsive Footer */
+/* Responsive layout for mobile screens */
 
 @media (max-width: 768px) {
-    .footer {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us {
+        width: 100%;
         text-align: center;
-        /* Center text for small screens */
     }
-    .footer h5 {
-        font-size: 1.3rem;
-        /* Smaller heading font size on mobile */
-    }
-    .footer-social-media li {
-        margin-bottom: 20px;
-        /* More space for mobile view */
-    }
-    .footer-social-media li a {
-        font-size: 1.5rem;
-        /* Larger icons for mobile view */
+    /* Follow Us section becomes visible at the bottom */
+    .follow-us {
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        right: 0;
     }
 }
