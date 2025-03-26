@@ -700,50 +700,38 @@ h2.text-orange:hover {
 }
 
 
-/* Follow Us Section - Positioned at the right corner */
-
-.follow-us {
-    width: 200px;
-    /* Fixed width for the follow us section */
+.social-media-icons {
     position: fixed;
-    /* Fix it to the right corner */
-    right: 0;
-    /* Align to the right edge of the screen */
-    bottom: 20px;
-    /* Adjust the bottom position to be slightly above the page bottom */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Dark background for better visibility */
-    padding: 15px;
-    border-radius: 8px;
-    /* Optional rounded corners */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
 }
 
-.follow-us h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.social-media-icons a {
+    display: block;
+    width: 50px;
+    /* Set width to adjust size of icons */
+    height: 50px;
+    /* Set height to adjust size of icons */
 }
 
-.follow-us ul {
-    list-style: none;
-    padding: 0;
+.social-media-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensures the logo fits without distortion */
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.follow-us li {
-    margin: 5px 0;
+.social-media-icons a:hover img {
+    transform: scale(1.1);
+    /* Slightly scale up on hover */
+    opacity: 0.8;
 }
-
-.follow-us a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    /* Smooth color change on hover */
-}
-
-.follow-us a:hover {
-    color: #d85627;
-    /* Orange color on hover */
-}
-
 
 /* Responsive layout for mobile screens */
 
